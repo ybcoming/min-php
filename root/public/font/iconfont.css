@@ -1,0 +1,144 @@
+
+@font-face {
+font-family: "iconfont";
+  src: url('http://cdn.annqi.com/public/font/iconfont.eot');  
+  src: url('http://cdn.annqi.com/public/font/iconfont.eot?#iefix') format('embedded-opentype'),  
+  url('http://cdn.annqi.com/public/font/iconfont.woff') format('woff'),  
+  url('http://cdn.annqi.com/public/font/iconfont.ttf') format('truetype'),  
+  url('http://cdn.annqi.com/public/font/iconfont.svg#iconfont') format('svg');  
+}
+/*
+@font-face {
+  font-family: 'iconfont';
+  src: url('//at.alicdn.com/t/font_1449124503_0714319.eot');
+  src: url('//at.alicdn.com/t/font_1449124503_0714319.eot?#iefix') format('embedded-opentype'), 
+  url('//at.alicdn.com/t/font_1449124503_0714319.woff') format('woff'), 
+  url('//at.alicdn.com/t/font_1449124503_0714319.ttf') format('truetype'), 
+  url('//at.alicdn.com/t/font_1449124503_0714319.svg#iconfont') format('svg'); 
+}
+                    
+    */                
+                                  
+                    
+                    
+                                                     
+                                                      
+                    
+                               
+                            
+                         
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select:none;
+}
+ 
+.icon-menu{
+  text-align: right;
+  text-decoration: none;
+  font-size: 14px;
+  font-style: normal;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  padding:1px 12px 0 14px;
+  float: left;
+  line-height: 38px;
+  height:38px;
+}
+ 
+.icon-black, .icon-cat{
+  margin-right: 8px;
+  text-align: right;
+  text-decoration: none;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-cat{
+line-height:18px;
+}
+.icon-black{
+margin-right: 4px;
+font-size:14px;
+
+}
+.icon-right{
+  text-align: right;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  top:1px;
+  position:relative;
+}
+ 
+.icon-more{
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-reg{
+    margin-top: 1px;
+    margin-left: -38px;
+    color: silver;
+    background: white;
+    z-index: 99999;
+    position: absolute;
+	padding: 7px 10px;
+}
+.icon-login{
+	margin-top: 1px;
+    position: absolute;
+    margin-left: -295px;
+    font-size: 14px;
+    border-right: 1px solid #cfcfcf;
+    padding: 7px 10px 7px 11px;
+    background: #F8F8F8;
+}
+ 
+.icon-warn{
+  padding-left: 10px;
+  padding-right: 10px;
+  color: rgb(255, 106, 59);
+}
+.icon-error{
+padding-left: 12px;
+    padding-right: 16px;
+    color: #e4393c;
+    font-size: 14px;
+}
+.icon-captcha{
+    margin-left: -32px;
+    margin-top: 1px;
+
+	padding:7px;
+    position: absolute;
+    display: none;
+	background:white;
+}
+.icon-star{
+font-size:60px;
+display:block;
+float:left;
+color:#9c9c9c;
+overflow:hidden;
+}
+.icon-star-cover{
+margin-top: -22px;
+color: #FDAA01;
+overflow: hidden;
+}
+.icon-pwd{
+color: #FDAA01;
+font-size:12px;
+}
+.icon-hide{
+width:0px;
+height:0px;
+}
+.icon-half{
+position: absolute;
+width:7px;
+overflow: hidden;
+margin-left: -14px;
+}

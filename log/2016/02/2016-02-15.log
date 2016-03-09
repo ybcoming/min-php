@@ -1,0 +1,223 @@
+2016/02/15 13:21:31  [IP: ]  [ /login.html ] [RECORD: 2 条]
+[[[[========********  sys.warn  ********========]]]]]
+    SUMMARY: {"unexpected error: mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it.
+" in file [D:\Java\Workspace\Project\AnnQi\git\site\min\inc\mysqlidb.inc]  at line [32] [error code/type: 2] }
+    EXTRA: [ [{"function":"apperror","class":"min\\inc\\app","type":"::","args":[2,"mysqli_connect(): (HY000\/2002): No connection could be made because the target machine actively refused it.\r\n","D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc",32,{"info":{"host":"127.0.0.1","dbname":"annqi_user","user":"root","pwd":"adolf","port":"3306"}}]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":32,"function":"mysqli_connect","args":["127.0.0.1","root","adolf","annqi_user","3306"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":52,"function":"connect_db","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\service\\login.service.php","line":19,"function":"query","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":["single","SELECT uid,name, email, pwd FROM user  WHERE name =?","s",["yb"]]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":38,"function":"checkpwd","class":"min\\service\\login","object":{},"type":"->","args":["yb"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":13,"function":"dologin","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":34,"function":"__construct","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":["index"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":223,"function":"dispatch","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":230,"function":"run","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\root\\index.php","line":22,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc"],"function":"require"}] ] 
+[[[[========********  sys.error  ********========]]]]]
+    SUMMARY: {"unexpected error: No connection could be made because the target machine actively refused it.
+" in file [D:\Java\Workspace\Project\AnnQi\git\site\min\inc\mysqlidb.inc]  at line [35] [error code/type: 256] }
+    EXTRA: [ [{"function":"apperror","class":"min\\inc\\app","type":"::","args":[256,"No connection could be made because the target machine actively refused it.\r\n","D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc",35,{"info":{"host":"127.0.0.1","dbname":"annqi_user","user":"root","pwd":"adolf","port":"3306"}}]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":35,"function":"trigger_error","args":["No connection could be made because the target machine actively refused it.\r\n",256]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":52,"function":"connect_db","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\service\\login.service.php","line":19,"function":"query","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":["single","SELECT uid,name, email, pwd FROM user  WHERE name =?","s",["yb"]]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":38,"function":"checkpwd","class":"min\\service\\login","object":{},"type":"->","args":["yb"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":13,"function":"dologin","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":34,"function":"__construct","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":["index"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":223,"function":"dispatch","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":230,"function":"run","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\root\\index.php","line":22,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc"],"function":"require"}] ] 
+2016/02/15 13:24:14  [IP: ]  [ /login.html ] [RECORD: 2 条]
+[[[[========********  sys.warn  ********========]]]]]
+    SUMMARY: {"unexpected error: mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it." in file [D:\Java\Workspace\Project\AnnQi\git\site\min\inc\mysqlidb.inc]  at line [32] [error code/type: 2] }
+    EXTRA: [ [{"function":"apperror","class":"min\\inc\\app","type":"::","args":[2,"mysqli_connect(): (HY000\/2002): No connection could be made because the target machine actively refused it.\r\n","D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc",32,{"info":{"host":"127.0.0.1","dbname":"annqi_user","user":"root","pwd":"adolf","port":"3306"}}]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":32,"function":"mysqli_connect","args":["127.0.0.1","root","adolf","annqi_user","3306"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":52,"function":"connect_db","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\service\\login.service.php","line":19,"function":"query","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":["single","SELECT uid,name, email, pwd FROM user  WHERE name =?","s",["yb"]]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":38,"function":"checkpwd","class":"min\\service\\login","object":{},"type":"->","args":["yb"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":13,"function":"dologin","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":34,"function":"__construct","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":["index"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":223,"function":"dispatch","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":230,"function":"run","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\root\\index.php","line":22,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc"],"function":"require"}] ] 
+[[[[========********  sys.error  ********========]]]]]
+    SUMMARY: {"unexpected error: No connection could be made because the target machine actively refused it." in file [D:\Java\Workspace\Project\AnnQi\git\site\min\inc\mysqlidb.inc]  at line [35] [error code/type: 256] }
+    EXTRA: [ [{"function":"apperror","class":"min\\inc\\app","type":"::","args":[256,"No connection could be made because the target machine actively refused it.\r\n","D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc",35,{"info":{"host":"127.0.0.1","dbname":"annqi_user","user":"root","pwd":"adolf","port":"3306"}}]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":35,"function":"trigger_error","args":["No connection could be made because the target machine actively refused it.\r\n",256]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":52,"function":"connect_db","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\service\\login.service.php","line":19,"function":"query","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":["single","SELECT uid,name, email, pwd FROM user  WHERE name =?","s",["yb"]]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":38,"function":"checkpwd","class":"min\\service\\login","object":{},"type":"->","args":["yb"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":13,"function":"dologin","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":34,"function":"__construct","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":["index"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":223,"function":"dispatch","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":230,"function":"run","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\root\\index.php","line":22,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc"],"function":"require"}] ] 
+2016/02/15 14:22:52  [IP: ]  [ /login.html ] [RECORD: 2 条]
+[[[[========********  sys.warn  ********========]]]]]
+    SUMMARY: {"unexpected error: mysqli_connect(): (HY000/2002): No connection could be made because the target machine actively refused it." in file [D:\Java\Workspace\Project\AnnQi\git\site\min\inc\mysqlidb.inc]  at line [32] [error code/type: 2] }
+    EXTRA: [ [{"function":"apperror","class":"min\\inc\\app","type":"::","args":[2,"mysqli_connect(): (HY000\/2002): No connection could be made because the target machine actively refused it.\r\n","D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc",32,{"info":{"host":"127.0.0.1","dbname":"annqi_user","user":"root","pwd":"adolf","port":"3306"}}]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":32,"function":"mysqli_connect","args":["127.0.0.1","root","adolf","annqi_user","3306"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":52,"function":"connect_db","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\service\\login.service.php","line":19,"function":"query","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":["single","SELECT uid,name, email, pwd FROM user  WHERE email =?","s",["yb@qq.com"]]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":38,"function":"checkpwd","class":"min\\service\\login","object":{},"type":"->","args":["yb@qq.com"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":13,"function":"dologin","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":34,"function":"__construct","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":["index"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":223,"function":"dispatch","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":230,"function":"run","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\root\\index.php","line":22,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc"],"function":"require"}] ] 
+[[[[========********  sys.error  ********========]]]]]
+    SUMMARY: {"unexpected error: No connection could be made because the target machine actively refused it." in file [D:\Java\Workspace\Project\AnnQi\git\site\min\inc\mysqlidb.inc]  at line [35] [error code/type: 256] }
+    EXTRA: [ [{"function":"apperror","class":"min\\inc\\app","type":"::","args":[256,"No connection could be made because the target machine actively refused it.\r\n","D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc",35,{"info":{"host":"127.0.0.1","dbname":"annqi_user","user":"root","pwd":"adolf","port":"3306"}}]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":35,"function":"trigger_error","args":["No connection could be made because the target machine actively refused it.\r\n",256]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\mysqlidb.inc","line":52,"function":"connect_db","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\service\\login.service.php","line":19,"function":"query","class":"min\\inc\\mysqlidb","object":{},"type":"->","args":["single","SELECT uid,name, email, pwd FROM user  WHERE email =?","s",["yb@qq.com"]]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":38,"function":"checkpwd","class":"min\\service\\login","object":{},"type":"->","args":["yb@qq.com"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\passport\\login.controller.php","line":13,"function":"dologin","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":34,"function":"__construct","class":"min\\module\\passport\\login","object":{"errors":[],"messages":[]},"type":"->","args":["index"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":223,"function":"dispatch","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":230,"function":"run","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\root\\index.php","line":22,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc"],"function":"require"}] ] 
+2016/02/15 16:59:24  [IP: ]  [ / ] [RECORD: 1 条]
+[[[[========********  sys.warn  ********========]]]]]
+    SUMMARY: {"unexpected error: Undefined variable: _SESSION" in file [D:\Java\Workspace\Project\AnnQi\git\site\min\view\www\index\index.tpl]  at line [437] [error code/type: 8] }
+    EXTRA: [ [{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\view\\www\\index\\index.tpl","line":437,"function":"apperror","class":"min\\inc\\app","type":"::","args":[8,"Undefined variable: _SESSION","D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\view\\www\\index\\index.tpl",437,{"name":""}]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":153,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\view\\www\\index\\index.tpl"],"function":"include"},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\view\\layout\\frame.tpl","line":24,"function":"view","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":162,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\view\\layout\\frame.tpl"],"function":"include"},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\www\\index.controller.php","line":17,"function":"layout","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\www\\index.controller.php","line":7,"function":"index","class":"min\\module\\www\\index","object":{},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":34,"function":"__construct","class":"min\\module\\www\\index","object":{},"type":"->","args":["index"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":212,"function":"dispatch","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":219,"function":"run","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\root\\index.php","line":22,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc"],"function":"require"}] ] 
+2016/02/15 22:36:11  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 22:36:25  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 22:49:36  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 22:50:31  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 22:50:32  [IP: ]  [ /getcaptcha.html?v=1455547832022 ] [RECORD: 1 条]
+[[[[========********  sys.warn  ********========]]]]]
+    SUMMARY: {"unexpected error: Undefined index: type" in file [D:\Java\Workspace\Project\AnnQi\git\site\min\module\util\getcaptcha.controller.php]  at line [16] [error code/type: 8] }
+    EXTRA: [ [{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\util\\getcaptcha.controller.php","line":16,"function":"apperror","class":"min\\inc\\app","type":"::","args":[8,"Undefined index: type","D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\util\\getcaptcha.controller.php",16,{"code":{}}]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\module\\util\\getcaptcha.controller.php","line":8,"function":"index","class":"min\\module\\util\\getcaptcha","object":{},"type":"->","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":34,"function":"__construct","class":"min\\module\\util\\getcaptcha","object":{},"type":"->","args":["index"]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":214,"function":"dispatch","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc","line":221,"function":"run","class":"min\\inc\\app","type":"::","args":[]},{"file":"D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\root\\index.php","line":22,"args":["D:\\Java\\Workspace\\Project\\AnnQi\\git\\site\\min\\inc\\app.inc"],"function":"require"}] ] 
+2016/02/15 22:56:04  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 22:57:14  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 22:58:01  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 22:58:56  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 22:59:59  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:00:45  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:01:51  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:04:27  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:09:53  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:11:09  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:13:15  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:20:09  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:23:08  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:24:12  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:38  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:44  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:45  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:45  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:46  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:47  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:47  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:49  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:49  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:49  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:50  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:50  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:50  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:50  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:51  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:51  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:52  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:52  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:53  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:53  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:53  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:53  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:54  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:54  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:30:55  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:31:48  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:31:50  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:32:53  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:36:58  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
+2016/02/15 23:40:36  [IP: ]  [ /login.html ] [RECORD: 1 条]
+[[[[========********  usr.error  ********========]]]]]
+    SUMMARY: 用户名或密码错误
+    EXTRA: [ [] ] 
