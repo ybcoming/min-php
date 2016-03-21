@@ -6,12 +6,12 @@ php.ini:   	session.gc_maxlifetime;
 */
 
 /* 
-预定义通用状态代码 ：-9999 到99
-
-			成功   								1
-			失败 								0 		
-			系统错误 							-1 
-			图片 显示验证码或验证码错误  		2
+预定义通用状态代码 ：-1 到99
+			
+			系统错误 									-1 
+			基本错误，如登录页面的用户名密码错误 		0 
+			成功   										1
+			图片 显示验证码或验证码错误  				2
 
 自定义错误代码 100+
 
@@ -59,8 +59,8 @@ class app{
 	 
 	}
 	public static function autoload($class){
-		// new \min\service\login();
-		// new \min\module\passport\login();
+		// new \min\service\login;
+		// new \min\module\passport\login;
 		$list	= explode('\\',$class);
 		if('min' != $list[0]) return;
 		$type	= $list[1];
@@ -80,7 +80,7 @@ class app{
 		if ( $error['type'] == E_ERROR ){
 			$error['title'] = 'fatal error';
 			$message = error_message($error);
-			$log->log( 'fatal.error',  $message, debug_backtrace());
+			$log->log('fatal.error', $message, debug_backtrace());
 		}
 		$log->record();
 	}
@@ -98,9 +98,14 @@ class app{
 				
 		$type = isset( $level[$errno] ) ? $level[$errno] : 'error'; 
 
-		$message = error_message(['title'=>'unexpected error','message'=>$errstr,'file'=>$errfile,'line'=>$errline,'type'=>$errno]);
+		$message = error_message([	'title'		=> 'unexpected error', 
+									'message'	=> $errstr, 
+									'file'		=> $errfile, 
+									'line'		=> $errline, 
+									'type'		=> $errno
+								]);
 		
-		self::$container->log()->log('sys.'.$type , $message ,debug_backtrace());
+		self::$container->log()->log('sys.'.$type, $message, debug_backtrace());
 		
 		if($type == 'error') {
 			self::response(-1);
@@ -112,9 +117,14 @@ class app{
 
 	public static function appexception($e){
 		
-		$message = error_message(['title'=>'unexpected expection','message'=>$e->getMessage(),'file'=>$e->getFile(),'line'=>$e->getLine(),'type'=>$e->getCode()]);
+		$message = error_message([	'title'		=> 'unexpected expection', 
+									'message'	=> $e->getMessage(), 
+									'file'		=> $e->getFile(), 
+									'line'		=> $e->getLine(),
+									'type'		=> $e->getCode()
+								]);
 		
-		self::$container->log()->log('sys.expection',$message,debug_backtrace());
+		self::$container->log()->log('sys.expection', $message, debug_backtrace());
 		
 		self::response(-1);
 		exit;
@@ -122,7 +132,7 @@ class app{
 	}
 	
 	
-	public static function usrerror( $code= 0 ,   $msg='',  $extra=[] ){
+	public static function usrerror($code=0, $msg='', $extra=[]){
 
 		self::$container->log()->log('usr.error', $msg, $extra );
 		
@@ -221,7 +231,7 @@ class app{
 
 
 	*/
-	public static function response( $code=0,  $msg ='',  $flag =0 ){
+	public static function response($code=0, $msg='', $flag=0){
 	
 		$result = ['status'=>$code];
 		
@@ -229,12 +239,12 @@ class app{
 		
 		if( 1 === $flag ) return $result;
 
-		if ( defined('IS_AJAX') && IS_AJAX ){	
-			ajax_return($result); 		
-		}elseif( defined('IS_JSONP') && IS_JSONP ){	
-			jsonp_return($result);			
-		}elseif($result['status'] !== 1){ 
-			header('Location: http://www.annqi.com/error.html');
+		defined('IS_AJAX') && IS_AJAX ) && ajax_return($result); 		
+		defined('IS_JSONP') && IS_JSONP && jsonp_return($result);
+		
+		// 系统错误 跳转ERROR PAGE
+		if( -1 == $code ){ 
+			header('Location: '.ERROR_PAGE);
 		}else{
 			
 			if( isset($_SERVER['HTTP_REFERER']) && preg_match('@^http[s]?://[a-z][a-z0-9\.]*\.'.explode('.',MIN_SITE,2)[1] .'(?:/[a-zA-Z0-9]+)+\.html@', $_SERVER['HTTP_REFERER'])){
@@ -244,10 +254,11 @@ class app{
 			}
 			header('Location: '.$flag);
 		}
+		
 		exit;
 	}
 	
-	public static function session_init( $force = FALSE ){
+	public static function session_init($force=FALSE){
 		// 与 未登陆不使用session
 		$session_name = 'appid';
 		if( empty($_COOKIE['logged']) && $force == false ) return;
