@@ -9,8 +9,7 @@ php.ini:   	session.gc_maxlifetime;
 预定义通用状态代码 ：-9999 到99
 
 			成功   								1
-			失败 								0 
-			
+			失败 								0 		
 			系统错误 							-1 
 			图片 显示验证码或验证码错误  		2
 
@@ -210,29 +209,38 @@ class app{
 		}
 	
 	}
-	
-	public static function response( $code=0,  $msg ='',  $flag ='0' ){
+	/* 
+		@parameter
+			$code return code int;
+			$msg  return msg string
+			$flag if 1 return direct
+				else if not ajax and not jsonp  
+				redirect to refer
+		@result
+
+
+
+	*/
+	public static function response( $code=0,  $msg ='',  $flag =0 ){
 	
 		$result = ['status'=>$code];
 		
-		if($msg !='') $result['message'] = $msg;
+		if($msg != '') $result['message'] = $msg;
 		
-		if($flag === '1') return $result;
+		if( 1 === $flag ) return $result;
 
 		if ( defined('IS_AJAX') && IS_AJAX ){	
 			ajax_return($result); 		
 		}elseif( defined('IS_JSONP') && IS_JSONP ){	
 			jsonp_return($result);			
-		}elseif($result['status'] < 1){ 
+		}elseif($result['status'] !== 1){ 
 			header('Location: http://www.annqi.com/error.html');
 		}else{
-			if (stripos($flag, SCHEME_TYPE) !== 0 ){
-				
-				if( isset($_SERVER['HTTP_REFERER']) && preg_match('@^http[s]?://[a-z][a-z0-9]*\.'.substr(MIN_SITE,3).'(?:/[a-zA-Z0-9]+)+\.html@', $_SERVER['HTTP_REFERER'])){
-					$flag = strip_tags($_SERVER['HTTP_REFERER']);
-				}else{
-					$flag = 'http://'.MIN_SITE;
-				}
+			
+			if( isset($_SERVER['HTTP_REFERER']) && preg_match('@^http[s]?://[a-z][a-z0-9\.]*\.'.explode('.',MIN_SITE,2)[1] .'(?:/[a-zA-Z0-9]+)+\.html@', $_SERVER['HTTP_REFERER'])){
+				$flag = strip_tags($_SERVER['HTTP_REFERER']);
+			}else{
+				$flag = MIN_SITE;
 			}
 			header('Location: '.$flag);
 		}
@@ -242,7 +250,7 @@ class app{
 	public static function session_init( $force = FALSE ){
 		// 与 未登陆不使用session
 		$session_name = 'appid';
-		if( empty($_COOKIE[$session_name]) && $force == false ) return;
+		if( empty($_COOKIE['logged']) && $force == false ) return;
 
 		// Use session cookies, not transparent sessions that puts the session id in
   		// the query string.

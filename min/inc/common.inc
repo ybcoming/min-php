@@ -61,17 +61,9 @@
 	}
 
 	function request_not_found() {
-	
-		if ( defined('IS_AJAX') && IS_AJAX ){
-			ajax_return(['status'=>0,'message'=>'请求错误']); 
-		}elseif( defined('IS_JSONP') && IS_JSONP ){
-			if(is_numeric($_GET['callback'])){
-				echo 'callback'.$_GET['callback'].'(-2);';
-			}
-		}else{
-			header('Location: http://www.annqi.com/error.html');
-		}
-		exit();
+		
+		\min\inc\app::response(0,'请求错误',ERROR_PAGE);
+		
 	}
 	
 	function request_error_found($arr) {
