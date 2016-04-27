@@ -239,18 +239,20 @@ class app{
 		
 		if( 1 === $flag ) return $result;
 
-		defined('IS_AJAX') && IS_AJAX ) && ajax_return($result); 		
+		defined('IS_AJAX') && IS_AJAX  && ajax_return($result); 		
 		defined('IS_JSONP') && IS_JSONP && jsonp_return($result);
 		
 		// 系统错误 跳转ERROR PAGE
 		if( -1 == $code ){ 
 			header('Location: '.ERROR_PAGE);
 		}else{
+			if (stripos($flag, 'http') !== 0 ){
 			
-			if( isset($_SERVER['HTTP_REFERER']) && preg_match('@^http[s]?://[a-z][a-z0-9\.]*\.'.explode('.',MIN_SITE,2)[1] .'(?:/[a-zA-Z0-9]+)+\.html@', $_SERVER['HTTP_REFERER'])){
-				$flag = strip_tags($_SERVER['HTTP_REFERER']);
-			}else{
-				$flag = MIN_SITE;
+				if( isset($_SERVER['HTTP_REFERER']) && preg_match('@^http[s]?://[a-z][a-z0-9\.]*\.'.explode('.',MIN_SITE,2)[1] .'(?:/[a-zA-Z0-9]+)+\.html@', $_SERVER['HTTP_REFERER'])){
+					$flag = strip_tags($_SERVER['HTTP_REFERER']);
+				}else{
+					$flag = MIN_SITE;
+				}
 			}
 			header('Location: '.$flag);
 		}
@@ -258,10 +260,10 @@ class app{
 		exit;
 	}
 	
-	public static function session_init($force=FALSE){
+	public static function session_init($force = FALSE){
 		// 与 未登陆不使用session
 		$session_name = 'appid';
-		if( empty($_COOKIE['logged']) && $force == false ) return;
+		if( empty($_COOKIE[$session_name]) && $force == false ) return;
 
 		// Use session cookies, not transparent sessions that puts the session id in
   		// the query string.

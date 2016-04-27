@@ -1,5 +1,8 @@
 <?php
- 
+/*****
+数据库连接成功，但在查询时断掉。。。。。。
+
+****/
 namespace min\inc;
 class mysqlidb{
 
@@ -108,7 +111,7 @@ class mysqlidb{
 		
 		while(true){
 		
-			$stmt 	= mysqli_prepare($this->connect($db_type),$sql);
+			$stmt = mysqli_prepare($this->connect($db_type),$sql);
 			
 			if(!$stmt){ 
 				if(true === $this->retry($db_type) ) continue;
