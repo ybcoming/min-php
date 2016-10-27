@@ -7,7 +7,7 @@ class base{
 	
 		if( empty( $_SESSION['logined']) ||TRUE != $_SESSION['logined'] ){
 		 
-			header('Location: http://passport.annqi.com/login.html');
+			header('Location: http://passport.qi.com/login.html');
 			exit;
 		}
     }

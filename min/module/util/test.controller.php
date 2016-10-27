@@ -39,7 +39,7 @@ class test{
 		$driver_options[\PDO::ATTR_ERRMODE] = \PDO::ERRMODE_SILENT;
 		$driver_options[\PDO::MYSQL_ATTR_USE_BUFFERED_QUERY] = false;
 		$driver_options[\PDO::ATTR_EMULATE_PREPARES] = false;
-		$dbh = new \PDO('mysql:dbname=annqi_user;host=127.0.0.1','root','adolf',$driver_options);
+		$dbh = new \PDO('mysql:dbname=qi_user;host=127.0.0.1','root','adolf',$driver_options);
 		 
 		$sth = $dbh->prepare($sql);
 		

@@ -8,20 +8,20 @@ Min.ready('shortcut-login', function(){
 	  
 	  var a = _$('shortcut-regfree').getElementsByTagName('a')[0];
 	  a.innerHTML='您好,&nbsp;&nbsp;'+nickname+'&nbsp;...';
-	  a.href = 'http://account.annqi.com/view.html';
+	  a.href = 'http://account.qi.com/view.html';
 	}
 	 
 	if(null === login ){
 
-			JSONP.get( 'http://passport.annqi.com/login/islogged.html', {}, function(data){
+			JSONP.get( 'http://passport.qi.com/login/islogged.html', {}, function(data){
 				console.log(data);
 				 if( data.status == 1 ) { 
-					_$('shortcut-login').innerHTML='<a href ="http://passport.annqi.com/logout.html " target="_blank" >退出</a>';
+					_$('shortcut-login').innerHTML='<a href ="http://passport.qi.com/logout.html " target="_blank" >退出</a>';
 				 } 
 			 });
 	}else if( '1' === login){
 		 
-		_$('shortcut-login').innerHTML='<a href ="http://passport.annqi.com/logout.html " target="_blank" >退出</a>';
+		_$('shortcut-login').innerHTML='<a href ="http://passport.qi.com/logout.html " target="_blank" >退出</a>';
 	}
 
 });

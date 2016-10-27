@@ -67,7 +67,7 @@ Min.event.bind('loginsubmit','click', function(){
 			pwd = _$('loginpwd'),
 			code = _$('logincode') ? _$('logincode').value : '';
 		minAjax({
-			url:'http://passport.annqi.com/login.html', 
+			url:'http://passport.qi.com/login.html', 
 			type:'POST', 
 			data:{
 				loginname:name.value,
@@ -79,8 +79,8 @@ Min.event.bind('loginsubmit','click', function(){
 				if(data.status == 1 ){
 					 
 					var ReturnUrl = Min.util.getQueryString('ReturnUrl');
-					var location = "http://www.annqi.com";
-					if(ReturnUrl && '@^http[s]?://[a-z][a-z0-9]*\.annqi\.com(?:/[a-zA-Z0-9]+)+\.html@'.test(ReturnUrl)){
+					var location = "http://www.qi.com";
+					if(ReturnUrl && '@^http[s]?://[a-z][a-z0-9]*\.qi\.com(?:/[a-zA-Z0-9]+)+\.html@'.test(ReturnUrl)){
 						location = ReturnUrl; 
 					} 
 					window.location.href = location;
@@ -92,7 +92,7 @@ Min.event.bind('loginsubmit','click', function(){
 					}else {
 					
 						var a = _$('login-code'),
-							code_url = 'http://util.annqi.com/captcha/get.html?type=login&v=';
+							code_url = 'http://util.qi.com/captcha/get.html?type=login&v=';
 							
 						if( data.status == 101 || data.status == 2 ){
 							
@@ -171,7 +171,7 @@ function code_check(){
 	var code = _$('logincode').value;
 	if(code == current_code) return;
 	current_code = code;
-	JSONP.get( 'http://util.annqi.com/captcha/check.html', {code:code,type:'login'}, function(data){
+	JSONP.get( 'http://util.qi.com/captcha/check.html', {code:code,type:'login'}, function(data){
 			if(_$('logincode').value != code) return;
 			 code_tag(data.status)
 		 }

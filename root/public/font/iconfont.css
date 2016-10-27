@@ -1,11 +1,11 @@
 
 @font-face {
 font-family: "iconfont";
-  src: url('http://cdn.annqi.com/public/font/iconfont.eot');  
-  src: url('http://cdn.annqi.com/public/font/iconfont.eot?#iefix') format('embedded-opentype'),  
-  url('http://cdn.annqi.com/public/font/iconfont.woff') format('woff'),  
-  url('http://cdn.annqi.com/public/font/iconfont.ttf') format('truetype'),  
-  url('http://cdn.annqi.com/public/font/iconfont.svg#iconfont') format('svg');  
+  src: url('http://cdn.qi.com/public/font/iconfont.eot');  
+  src: url('http://cdn.qi.com/public/font/iconfont.eot?#iefix') format('embedded-opentype'),  
+  url('http://cdn.qi.com/public/font/iconfont.woff') format('woff'),  
+  url('http://cdn.qi.com/public/font/iconfont.ttf') format('truetype'),  
+  url('http://cdn.qi.com/public/font/iconfont.svg#iconfont') format('svg');  
 }
 /*
 @font-face {

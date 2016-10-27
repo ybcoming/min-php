@@ -1,8 +1,8 @@
 2016/03/06 19:41:45  [IP: ]  [ /regist/success.html ] [RECORD: 1 条]
 [[[[========********  fatal.error  ********========]]]]]
-    SUMMARY: {"fatal error: Call to undefined method min\module\account\regist::sccess()" in file [D:\Java\Workspace\Project\AnnQi\git\site\min\module\account\regist.controller.php]  at line [10] [error code/type: 1] }
+    SUMMARY: {"fatal error: Call to undefined method min\module\account\regist::sccess()" in file [D:\Java\Workspace\Project\QI\git\site\min\module\account\regist.controller.php]  at line [10] [error code/type: 1] }
     EXTRA: [ [{"function":"tails","class":"min\\inc\\app","type":"::","args":[]}] ] 
 2016/03/06 19:41:47  [IP: ]  [ /regist/success.html ] [RECORD: 1 条]
 [[[[========********  fatal.error  ********========]]]]]
-    SUMMARY: {"fatal error: Call to undefined method min\module\account\regist::sccess()" in file [D:\Java\Workspace\Project\AnnQi\git\site\min\module\account\regist.controller.php]  at line [10] [error code/type: 1] }
+    SUMMARY: {"fatal error: Call to undefined method min\module\account\regist::sccess()" in file [D:\Java\Workspace\Project\QI\git\site\min\module\account\regist.controller.php]  at line [10] [error code/type: 1] }
     EXTRA: [ [{"function":"tails","class":"min\\inc\\app","type":"::","args":[]}] ] 

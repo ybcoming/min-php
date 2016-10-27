@@ -679,7 +679,7 @@ if (Min.UA.isIE6) try {
 } catch(e) {};
 
 if (Min.UA.isIE8){
-Min.css.addCssByLink('http://cdn.annqi.com/public/css/ie8.css');
+Min.css.addCssByLink('http://cdn.qi.com/public/css/ie8.css');
 }
 
 

@@ -100,7 +100,7 @@
 		}
 		var withIEStorage = function(storeFunction) {
 			return function() {
-				document.domain = "annqi.com";
+				document.domain = "qi.com";
 				var args = Array.prototype.slice.call(arguments, 0)
 				args.unshift(storage)
 				// See http://msdn.microsoft.com/en-us/library/ms531081(v=VS.85).aspx

@@ -77,7 +77,7 @@
 				echo 'callback'.$_GET['callback'].'(-1);';
 			}
 		}else{
-			header('Location: http://www.annqi.com/error.html');
+			header('Location: http://www.qi.com/error.html');
 		}
 		exit();
 	}
