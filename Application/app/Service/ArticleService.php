@@ -11,15 +11,31 @@ class ArticleService extends \Min\Service
 			return $this->eidt($param);
 		}
 		
+		$set = [
+			'tag' 		=> intval($param['tag']),
+			'start' 	=> intval($param['start']), 
+			'end' 		=> intval($param['end']), 
+			'region' 	=> intval($param['region']),
+			'title' 	=> ':title', 
+			'desc' 		=> ':desc',
+			'icon' 		=> ':icon'
+		];
+		
+		$bind = [
+			':title' 	=> $param['title'], 
+			':desc'		=> $param['desc'],
+			':icon' 	=> $param['icon']
+		];
+		
 		$sql = 'INSERT INTO {article} (`tag`, `start`, `end`, `region`, `title`, `desc`, `icon`) VALUES ('.
-			implode(',', [intval($param['tag']), intval($param['start']), intval($param['end']), intval($param['region']), ':title', ':desc', ':icon)']);
+			implode(',', $set);
 
 		try {
 			$this->DBManager()->transaction_start();
 			$this->DBManager()->inTransaction();
-			$id = $this->query($sql, [':title' => $param['title'], ':desc' => $param['desc'], ':icon' => $param['icon']]);
-			$sql2 = 'INSERT INTO {article_content} (id, content) values ('. intval($id). ', :content )';
-			$this->query($sql2, [':content' => $param['content']]);
+			$id = $this->query($sql, $bind);
+			$sql_content = 'INSERT INTO {article_content} (id, content) values ('. intval($id). ', :content )';
+			$this->query($sql_content, [':content' => $param['content']]);
 			$this->DBManager()->transaction_commit();
 			return $this->success();
 		} catch (\Throwable $t) {
@@ -55,11 +71,11 @@ class ArticleService extends \Min\Service
 
 		$result = $this->query($sql, $bind);
 		
-		$sql2 = 'UPDATE {article_content} SET content = :content  WHERE id = '. $param['id'];
+		$sql_content = 'UPDATE {article_content} SET content = :content  WHERE id = '. $param['id'];
 		
-		$result2 = $this->query($sql2, [':content' => $param['content']]);
+		$result_content = $this->query($sql_content, [':content' => $param['content']]);
 			 
-		if ($result && $result2) {
+		if ($result && $result_content) {
 			return $this->success();
 		} else {
 			return $this->error('更新失败', 1);
