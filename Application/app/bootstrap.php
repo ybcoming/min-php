@@ -49,7 +49,7 @@
  
 	// server name as xxx_xxx
  
-	$di->setShared('mysql', '\\Min\\Backend\\MysqliPDO');
+	$di->setShared('mysql', '\\Min\\Backend\\MysqlPdo');
 	$di->setShared('redis', '\\Min\\Cache\\Redis');
 	$di->setShared('file_cache', '\\Min\\Cache\\FileCache');
 	$di->setShared('logger', '\\Min\\Logger');

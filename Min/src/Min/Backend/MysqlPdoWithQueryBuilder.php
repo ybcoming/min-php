@@ -4,17 +4,22 @@
 
 query(user')->;
 
+链式组装查询语句
+
+未完成。。。。
+
 ****/
 namespace Min\Backend;
 
 use Min\MinException as MinException;
 
-class MysqliPDO
+class MysqlPdoWithQueryBuilder
 {
 	private $ref = null; 
 	private $conf = [];
 	private $intrans = [];
 	private $query_log = [];
+	private $query_bulider = [];
 	private $connections = [];
 	private $active_db	= 'default';
 	private $prefix_key	= 'default';
@@ -95,16 +100,16 @@ class MysqliPDO
 	 
 	public function query($sql, $param)
 	{
+
 		$this->query_log[] = $sql = strtr($sql, ['{' => $this->conf[$this->active_db]['prefix'][$this->prefix_key], '}' => '']);
 		
 		watchdog($sql);
 		
 		$sql_splite = preg_split('/\s+/', $sql, 2);
 
-		//$action = strtolower($sql_splite[0]);
-		$action = $sql_splite[0];
+		$action = strtolower($sql_splite[0]);
 
-		if (!in_array($action, ['SELECT', 'INSERT', 'UPDATE', 'DELETE'], true)) {
+		if (!in_array($action, ['select', 'insert', 'update', 'delete'], true)) {
 			throw new \PDOException('Can not recognize action in sql: '. $sql, -4);
 		}
 		
@@ -293,5 +298,91 @@ class MysqliPDO
 		if (!empty($this->connections[$link_id])) {
 		  unset($this->connections[$link_id]);
 		}
+	}
+	/*
+	public function from($table, $alias = ' ')
+	{
+		$this->query_bulider['main_table'] = $table;
+		$this->query_bulider['main_table_alia'] = $alias;
+		return $this;
+	}
+	
+	public function update()
+	{
+		$this->query_bulider['action'] = 'UPDATE';
+		$result = $this->query();
+		$this->query_bulider = [];
+		return $result;
+	}
+	
+	public function select($fields = '')
+	{
+		$this->query_bulider['action'] = 'SELECT';
+		$this->query_bulider['fields'] = $fields;
+		$result = $this->query();
+		$this->query_bulider = [];
+		return $result;
+	}
+	
+	public function insert()
+	{
+		$this->query_bulider['action'] = 'INSERT';
+		$result = $this->query();
+		$this->query_bulider = [];
+		return $result;
+	}
+	
+	public function delete()
+	{
+		$this->query_bulider['action'] = 'DELETE';
+		$result = $this->query();
+		$this->query_bulider = [];
+		return $result;
+	}
+	
+	public function fields($fields)
+	{
+		$this->query_bulider['fields'] = $fields;
+		return $this;
+	}
+	
+	public function set($fields)
+	{
+		$this->query_bulider['set'] = $fields;
+		return $this;
+	}
+	
+	public function where($fields)
+	{
+		$this->query_bulider['where'] = $fields;
+		return $this;
+	}
+	
+	public function join($table, $alias, $method = 'LEFT')
+	{
+		$this->query_bulider['join_table'][] = [ 'table' => $table, 'alias' => $alias];
+		return $this;
+	}
+	
+	public function bulid()
+	{
+		if (empty($this->query_bulider['main_table'])) throw new \Min\MinException('没有设置主表');
+		if (empty($this->query_bulider['action'])) 	   throw new \Min\MinException('没有设置查询方式');
+		if (!empty($this->query_bulider['join_table']) && empty($this->query_bulider['main_table_alia'])) throw new \Min\MinException('没有设置主表别名');
+		
+		$sql = '';
+		switch ($this->query_bulider['action']) {
+			case 'SELECT':
+				$sql = 'SELECT ' . $this->query_bulider['fields'] ?: '*' . ' FROM ' . $this->conf[$this->active_db]['prefix'][$this->prefix_key] . $this->query_bulider['main_table'] . ' ' . $this->query_bulider['main_table_alias']; 
+			case 'UPDATE':
+			case 'INSERT':
+			case 'DELETE':
+			
+			
+			
+		}
+		
+	*/	
+		
 	}
 }
